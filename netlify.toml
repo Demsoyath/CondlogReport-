@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "CondlogReport/LoginPage.html"
+status = 200

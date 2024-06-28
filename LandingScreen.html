@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondlogReport</title>
+    <link rel="stylesheet" href="CSS\LandingScreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <h2><span class="blue-text">Condlog</span><span class="white-text">Report</span></h2>
+
+<div class="container-wrapper">
+    <div class="container">
+        <div class="left-section">
+            <div class="user-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="User Image">
+                <span class="username">Placeholder</span>
+            </div>
+            <div class="opcoes-menu">
+                <span class="opcoes">Opções</span>
+            </div>
+            <ul class="menu">
+                <li><i class="fas fa-home"></i><a href="LandingScreen.html">Tela Inicial</a></li>
+                <li><i class="fas fa-user"></i><a href="DadosPessoais.html">Dados Pessoais</a></li>
+                <li><i class="fas fa-pen"></i><a href="FormPage.html">Criar Ocorrência</a></li>
+                <li><i class="fas fa-book"></i><a href="ListaDeOcorrencias.html">Lista de Ocorrências</a></li>
+                <li><i class="fas fa-sign-out-alt"></i><a href="LoginPage.html">Sair</a></li>
+            </ul>
+        </div>
+        <div class="landing-section">
+            <div class="welcome-message">
+                <h3 id="welcomeMessage">Bem-vindo de volta, <span class="username">Placeholder</span>!</h3>
+                <p>É ótimo vê-lo(a) novamente. Aqui você pode acompanhar/criar ocorrências e também ficar de olho nas notícias do nosso condomínio.</p>
+            </div>
+            
+            <div class="alerts-section">
+                <h3>Alertas do Condomínio</h3>
+                <div class="alert">
+                    <p><strong>Manutenção Programada:</strong> A manutenção programada no elevador do bloco A será realizada amanhã, das 9h às 12h. Por favor, planeje com antecedência.</p>
+                </div>
+                <div class="alert">
+                    <p><strong>Assembleia Geral:</strong> Lembramos a todos os moradores sobre a Assembleia Geral marcada para o próximo sábado, às 10h, no salão de festas. Sua participação é importante.</p>
+                </div>
+            </div>
+        </div>
+</div>
+<br>
+<button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+<script src="JS\LandingScreen.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondlogReport</title>
+    <link rel="stylesheet" href="CSS\FormPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<h2><span class="blue-text">Condlog</span><span class="white-text">Report</span></h2>
+
+<div class="container-wrapper">
+    <div class="container">
+        <div class="left-section">
+            <div class="user-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="User Image">
+                <span class="username">Placeholder</span>
+            </div>
+            <div class="opcoes-menu">
+                <span class="opcoes">Opções</span>
+            </div>
+            <ul class="menu">
+                <li><i class="fas fa-home"></i><a href="LandingScreen.html">Tela Inicial</a></li>
+                <li><i class="fas fa-user"></i><a href="DadosPessoais.html">Dados Pessoais</a></li>
+                <li><i class="fas fa-pen"></i><a href="FormPage.html">Criar Ocorrência</a></li>
+                <li><i class="fas fa-book"></i><a href="ListaDeOcorrencias.html">Lista de Ocorrências</a></li>
+                <li><i class="fas fa-sign-out-alt"></i><a href="LoginPage.html">Sair</a></li>
+            </ul>
+        </div>
+        <div class="form-section">
+            <form action="LandingScreen.html">
+                <div class="row">
+                    <div class="title">
+                        <label for="title">Criar Ocorrência</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pnome">Nome Completo</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="pnome" name="primeironome" placeholder="Ex: João">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="telefone">Telefone</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="telefone" name="telefone" placeholder="Ex: (71) 90000-0000">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="email" placeholder="Ex: condlogreport@hotmail.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="apartamento">Apartamento</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="apartamento" name="apartamento" placeholder="Ex: Ap. 602">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="bloco-condominio">Bloco</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="bloco-condominio" name="Bloco">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="assunto">Assunto</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="assunto" name="Assunto" placeholder="Descreva o seu problema..." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+<script src="JS\FormPage.js"></script>
+</body>
+</html>

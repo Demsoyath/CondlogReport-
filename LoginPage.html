@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondlogReport</title>
+    <link rel="stylesheet" href="CSS/LoginPage.css">
+</head>
+<body>
+    <h2><span class="blue-text">Condlog</span><span class="white-text">Report</span></h2>
+    <div class="container" id="container">
+        <div class="form-container cadastro-container">
+            <form id="register-form">
+                <h1>Crie a sua conta</h1>
+                <span>use o seu e-mail principal para o cadastro</span>
+                <input type="text" placeholder="Nome Completo" id="nome" />
+                <input type="text" placeholder="Telefone" id="telefone" />
+                <input type="text" placeholder="Apartamento" id="apartamento" />
+                <input type="text" placeholder="Bloco" id="bloco" />
+                <input type="email" placeholder="E-mail" id="email" />
+                <input type="password" placeholder="Senha" id="senha" />
+                <button id="cadastro-button">Cadastrar</button>
+                <p id="register-message"></p>
+            </form>
+        </div>
+        <div class="form-container login-container">
+            <form id="login-form">
+                <h1>Entre na sua conta</h1>
+                <br>
+                <span>Insira os seus dados pessoais</span>
+                <input type="email" placeholder="E-mail" id="logininput" />
+                <input type="password" placeholder="Senha" id="senhainput" />
+                <a href="EsqueceuSenha.html">Esqueceu a sua senha?</a>
+                <button id="login-button">Login</button>
+                <p id="login-message"></p>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem vindo!</h1>
+                    <p>Por favor, no formulário a direita insira os seus dados pessoais,
+                        porém, caso deseje retornar ao login, clique no botão abaixo.</p>
+                    <button class="ghost" id="login">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá, condômino!</h1>
+                    <p>Insira as suas informaçõoes agora mesmo para salvar as suas ocorrências.</p>
+                    <button class="ghost" id="cadastro-login">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="JS/LoginPage.js"></script>
+</body>
+</html>

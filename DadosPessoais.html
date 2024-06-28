@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondlogReport</title>
+    <link rel="stylesheet" href="CSS\DadosPessoais.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<h2><span class="blue-text">Condlog</span><span class="white-text">Report</span></h2>
+
+<div class="container-wrapper">
+    <div class="container">
+        <div class="left-section">
+            <div class="user-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="User Image">
+                <span class="username">Placeholder</span>
+            </div>
+            <div class="opcoes-menu">
+                <span class="opcoes">Opções</span>
+            </div>
+            <ul class="menu">
+                <li><i class="fas fa-home"></i><a href="LandingScreen.html">Tela Inicial</a></li>
+                <li><i class="fas fa-user"></i><a href="DadosPessoais.html">Dados Pessoais</a></li>
+                <li><i class="fas fa-pen"></i><a href="FormPage.html">Criar Ocorrência</a></li>
+                <li><i class="fas fa-book"></i><a href="ListaDeOcorrencias.html">Lista de Ocorrências</a></li>
+                <li><i class="fas fa-sign-out-alt"></i><a href="LoginPage.html">Sair</a></li>
+            </ul>
+        </div>
+        <div class="dadosusuario-section">
+            <div class="row">
+                <div class="title">
+                    <label for="title">Dados Pessoais</label>
+                </div>
+            </div>
+            <div class="user-image">
+                <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="User Image" style="width: 100px; height: auto;">
+            </div>
+            <div class="personal-info">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="nome" placeholder="Nome Completo" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('nome')"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="telefone" placeholder="Telefone" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('telefone')"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="apartamento">Apartamento</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="apartamento" placeholder="Apartamento" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('apartamento')"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bloco">Bloco</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="bloco" placeholder="Bloco" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('bloco')"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="input-with-icon">
+                        <input type="email" id="email" placeholder="E-mail" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('email')"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="senha" placeholder="Senha" disabled>
+                        <i class="fas fa-pencil-alt edit-icon" onclick="enableEdit('senha')"></i>
+                    </div>
+                </div>
+            </div>
+            <button class="save-button" onclick="saveChanges()">Salvar Alterações</button>
+        </div>
+    </div>
+</div>
+<br>
+<button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+<script src="JS\DadosPessoais.js"></script>
+</body>
+</html>
