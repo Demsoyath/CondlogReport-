@@ -95,6 +95,22 @@ app.post('/ocorrencia', (req, res) => {
     });
 });
 
+app.get('/occurrences', (req, res) => {
+    const sql = `
+        SELECT o.id, u.name, u.apartment, u.block, o.assunto, o.status 
+        FROM ocorrencias o
+        JOIN users u ON o.user_id = u.id
+    `;
+
+    connection.query(sql, (err, results) => {
+        if (err) {
+            console.error('Erro ao buscar ocorrências:', err);
+            return res.status(500).json({ message: 'Erro ao buscar ocorrências' });
+        }
+        res.status(200).json(results);
+    });
+});
+
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
