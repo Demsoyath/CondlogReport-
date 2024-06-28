@@ -52,11 +52,10 @@ function getCookie(name) {
   return '';
 }
 
-// Function to send form data to the server
 document.getElementById('occurrence-form').addEventListener('submit', async function(event) {
   event.preventDefault();
   
-  const userId = getCookie('userId'); // Assuming you store user ID in cookies during login
+  const userId = getCookie('userId');
   const assunto = document.getElementById('assunto').value;
 
   const data = {
