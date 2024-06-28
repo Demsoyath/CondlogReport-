@@ -64,6 +64,7 @@ app.post('/login', (req, res) => {
             res.status(200).json({ 
                 message: 'Login bem-sucedido!', 
                 user: {
+                    id: user.id,
                     name: user.name,
                     phone: user.phone,
                     apartment: user.apartment,
@@ -76,6 +77,21 @@ app.post('/login', (req, res) => {
             console.log('Email ou senha incorretos!');
             res.status(400).json({ message: 'Email ou senha incorretos!' });
         }
+    });
+});
+
+app.post('/ocorrencia', (req, res) => {
+    const { user_id, assunto } = req.body;
+    const sql = 'INSERT INTO ocorrencias (user_id, assunto) VALUES (?, ?)';
+    const values = [user_id, assunto];
+
+    connection.query(sql, values, (err, result) => {
+        if (err) {
+            console.error('Erro ao inserir ocorrência:', err);
+            return res.status(500).json({ success: false, message: 'Erro ao criar ocorrência' });
+        }
+        console.log('Ocorrência criada com sucesso!');
+        res.status(201).json({ success: true, message: 'Ocorrência criada com sucesso!' });
     });
 });
 

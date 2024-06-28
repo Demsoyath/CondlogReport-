@@ -59,10 +59,11 @@ document.getElementById('login-button').addEventListener('click', async (event) 
     const result = await response.json();
     console.log('Result:', result);
     if (response.ok) {
-      const { name, phone, apartment, block, email, password } = result.user;
+      const {id, name, phone, apartment, block, email, password } = result.user;
 
       const expirationDate = new Date();
       expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+      document.cookie = `userId=${id}; expires=${expirationDate.toUTCString()}; path=/`;
       document.cookie = `userName=${name}; expires=${expirationDate.toUTCString()}; path=/`;
       document.cookie = `userPhone=${phone}; expires=${expirationDate.toUTCString()}; path=/`;
       document.cookie = `userApartment=${apartment}; expires=${expirationDate.toUTCString()}; path=/`;

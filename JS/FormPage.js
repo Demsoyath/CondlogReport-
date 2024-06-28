@@ -51,3 +51,38 @@ function getCookie(name) {
   }
   return '';
 }
+
+// Function to send form data to the server
+document.getElementById('occurrence-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const userId = getCookie('userId'); // Assuming you store user ID in cookies during login
+  const assunto = document.getElementById('assunto').value;
+
+  const data = {
+      user_id: userId,
+      assunto
+  };
+
+  try {
+      const response = await fetch('http://localhost:3000/ocorrencia', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+          alert('Ocorrência registrada com sucesso!');
+          window.location.href = 'LandingScreen.html';
+      } else {
+          alert('Erro ao registrar ocorrência: ' + result.message);
+      }
+  } catch (error) {
+      console.error('Erro ao registrar ocorrência:', error);
+      alert('Erro ao registrar ocorrência.');
+  }
+});
